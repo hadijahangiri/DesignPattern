@@ -13,7 +13,7 @@ namespace Payment.Domain
             ExpireDate = expireDate;
         }
 
-        public Payment Payed(int value)
+        public Payment Pay(int value)
         {
             if (this.ExpireDate < DateTime.Now)
                 throw new Exception("Order is invalid");

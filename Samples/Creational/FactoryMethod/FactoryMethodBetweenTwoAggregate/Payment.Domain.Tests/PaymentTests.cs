@@ -12,7 +12,7 @@ namespace Payment.Domain.Tests
             var orderValue = 1000;
             var order = new Order(orderId, DateTime.Now.AddMinutes(15));
 
-            var payment = order.Payed(orderValue);
+            var payment = order.Pay(orderValue);
 
            Assert.Equal(payment.OrderId, orderId);
            Assert.Equal(payment.Value, orderValue);
@@ -25,7 +25,7 @@ namespace Payment.Domain.Tests
             var orderValue = 1000;
             var order = new Order(orderId, DateTime.Now.AddMinutes(-1));
 
-            var action = new Action(() => order.Payed(orderValue));
+            var action = new Action(() => order.Pay(orderValue));
 
             Assert.Throws<Exception>(action);
         }
