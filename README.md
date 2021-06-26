@@ -1,3 +1,5 @@
-# NServiceBusSample
+# Design patterns in c#
 
-You can see each example in different branch
+Samples :
+
+1- Factory Method
